@@ -4,6 +4,7 @@ from typing import Any
 
 import requests
 from app.client.templates import TemplatesClient
+from app.client.sandboxes import SandboxesClient
 
 class CubeSandboxClient:
     """
@@ -27,6 +28,7 @@ class CubeSandboxClient:
             }
         )
         self.templates = TemplatesClient(self)
+        self.sandboxes = SandboxesClient(self)
 
     def get(self, endpoint: str, **kwargs) -> Any:
         response = self.session.get(
