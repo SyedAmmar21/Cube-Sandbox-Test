@@ -53,6 +53,10 @@ class CubeSandboxClient:
             print(f"Status: {response.status_code}")
             print(response.text)
 
+        if not response.ok:
+            print("Status:", response.status_code)
+            print("Response:", response.text)
+
         response.raise_for_status()
 
         return {

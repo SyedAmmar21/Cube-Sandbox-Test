@@ -4,8 +4,8 @@ from pydantic import BaseModel, Field
 class CreateTemplateRequest(BaseModel):
     image: str
 
-    writable_layer_size: str | None = Field(
-        default=None,
+    writable_layer_size: str = Field(
+        default="1Gi",
         alias="writableLayerSize",
     )
 

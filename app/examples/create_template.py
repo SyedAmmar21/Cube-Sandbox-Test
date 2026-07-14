@@ -5,6 +5,7 @@ client = CubeSandboxClient()
 
 request = CreateTemplateRequest(
     image="ubuntu:24.04",
+    writable_layer_size="1Gi",
 )
 
 response = client.templates.create(request)
