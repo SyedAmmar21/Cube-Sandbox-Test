@@ -2,6 +2,4 @@ from app.client.client import CubeSandboxClient
 
 client = CubeSandboxClient()
 
-templates = client.templates.list()
-
-print(templates)
+print(client.get("/health"))
